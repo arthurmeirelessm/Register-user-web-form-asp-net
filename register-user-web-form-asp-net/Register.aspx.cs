@@ -11,7 +11,6 @@ namespace register_user_web_form_asp_net
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
