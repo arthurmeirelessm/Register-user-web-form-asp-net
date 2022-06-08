@@ -12,7 +12,7 @@ namespace register_user_web_form_asp_net.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class Peoples
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -13,10 +13,10 @@ namespace register_user_web_form_asp_net.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Register_user_web_formEntities : DbContext
+    public partial class Register_user_web_formEntities1 : DbContext
     {
-        public Register_user_web_formEntities()
-            : base("name=Register_user_web_formEntities")
+        public Register_user_web_formEntities1()
+            : base("name=Register_user_web_formEntities1")
         {
         }
     
@@ -25,6 +25,6 @@ namespace register_user_web_form_asp_net.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Peoples> Peoples { get; set; }
     }
 }

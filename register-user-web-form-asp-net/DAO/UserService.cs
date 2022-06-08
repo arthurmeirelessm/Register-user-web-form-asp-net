@@ -7,21 +7,20 @@ namespace register_user_web_form_asp_net.DAO
 {
     public class UserService
     {
-        public static bool RegisterUser(Models.Users user)
+        public static bool RegisterUser(Models.Peoples user)
         {
             try
             {
-                using (var connection = new Models.Register_user_web_formEntities())
+                using (var connection = new Models.Register_user_web_formEntities1())
                 {
-                    connection.Users.Add(user);
+                    connection.Peoples.Add(user);
                     connection.SaveChanges();
                     return true;
                 }
             }
             catch (Exception error)
             {
-
-                return false;
+                throw error;
             }
         }
     }

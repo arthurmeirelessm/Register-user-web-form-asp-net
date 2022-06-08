@@ -16,9 +16,9 @@
                 text-align: center
             }
 
-        .campo {
+          .campo {
             padding: 10px;
-        }
+           }
 
             .campo input[type="text"] {
                 float: right;
@@ -52,7 +52,8 @@
             </div>
             <br />
 
-            <p><asp:Literal runat="server" id="registerMessage"></asp:Literal></p>
+            <p>
+                <asp:Literal runat="server" ID="registerMessage"></asp:Literal></p>
         </div>
     </form>
 </body>

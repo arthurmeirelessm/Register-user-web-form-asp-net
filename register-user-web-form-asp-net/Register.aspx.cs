@@ -18,17 +18,20 @@ namespace register_user_web_form_asp_net
 
         private void btnRegisterUser_Click(object sender, EventArgs e)
         {
-            var newUser = new Models.Users();
+            var newUser = new Models.Peoples();
             newUser.Name = nameId.Text;
             newUser.Email = emailId.Text;
             newUser.Number = numberId.Text;
 
-            bool VerifyIfRegisterOrNo = DAO.UserService.RegisterUser(newUser);
-            if (VerifyIfRegisterOrNo)
+            try
             {
+                DAO.UserService.RegisterUser(newUser);
                 registerMessage.Text = "Register with success";
             }
-            registerMessage.Text = "Not registered";
+            catch (Exception ex)
+            {
+                registerMessage.Text = ex.Message;
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
