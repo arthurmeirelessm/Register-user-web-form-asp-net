@@ -48,8 +48,11 @@
             </div>
 
             <div class="campo">
-                <asp:Button ID="RegisterButtonId" runat="server" Text="Register"></asp:Button>
+                <asp:Button ID="btnRegisterUser" runat="server" Text="Register"></asp:Button>
             </div>
+            <br />
+
+            <p><asp:Literal runat="server" id="registerMessage"></asp:Literal></p>
         </div>
     </form>
 </body>

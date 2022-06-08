@@ -51,12 +51,21 @@ namespace register_user_web_form_asp_net
         protected global::System.Web.UI.WebControls.TextBox numberId;
 
         /// <summary>
-        /// RegisterButtonId control.
+        /// btnRegisterUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterButtonId;
+        protected global::System.Web.UI.WebControls.Button btnRegisterUser;
+
+        /// <summary>
+        /// registerMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal registerMessage;
     }
 }

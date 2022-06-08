@@ -1,4 +1,5 @@
-﻿using System;
+﻿using register_user_web_form_asp_net.DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,12 +13,23 @@ namespace register_user_web_form_asp_net
 
         protected override void OnInit(EventArgs e)
         {
-            RegisterButtonId.Click += RegisterButtonId_Click;
+            btnRegisterUser.Click += btnRegisterUser_Click;
         }
 
+        private void btnRegisterUser_Click(object sender, EventArgs e)
+        {
+            var newUser = new Models.Users();
+            newUser.Name = nameId.Text;
+            newUser.Email = emailId.Text;
+            newUser.Number = numberId.Text;
 
-        void RegisterButtonId_Click(object )
-
+            bool VerifyIfRegisterOrNo = DAO.UserService.RegisterUser(newUser);
+            if (VerifyIfRegisterOrNo)
+            {
+                registerMessage.Text = "Register with success";
+            }
+            registerMessage.Text = "Not registered";
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
