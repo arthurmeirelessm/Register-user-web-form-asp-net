@@ -16,9 +16,9 @@
                 text-align: center
             }
 
-          .campo {
+        .campo {
             padding: 10px;
-           }
+        }
 
             .campo input[type="text"] {
                 float: right;
@@ -28,12 +28,23 @@
             .campo input[type="submit"] {
                 float: right;
             }
+
+        body {
+            background-color: black;
+            background-image: url('../Images/image.png');
+            background-size: cover;
+            font-family: sans-serif;
+        }
+        
+        .alert-danger {
+            color: coral
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <h1>Registration</h1>
+            <h1 class="alert-info">Registration</h1>
             <div class="campo">
                 <asp:Label runat="server" AssociatedControlID="nameId">Name: </asp:Label>
                 <asp:TextBox runat="server" ID="nameId"></asp:TextBox>
@@ -52,9 +63,16 @@
             </div>
             <br />
 
-            <p>
-                <asp:Literal runat="server" ID="registerMessage"></asp:Literal></p>
+
+            <div class="alert-danger">
+                <p>
+                    <asp:Literal runat="server" ID="registerMessage"></asp:Literal></p>
+            </div>
+
         </div>
     </form>
 </body>
 </html>
+
+
+

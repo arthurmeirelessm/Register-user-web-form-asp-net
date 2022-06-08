@@ -1,5 +1,6 @@
 ﻿/* Move down content because we have a fixed navbar that is 50px tall */
 body {
+    background-image: url('../Images/image.png');
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -26,6 +27,7 @@ textarea {
     }
 
     .body-content {
+        background-color: darkslateblue;
         padding: 0;
     }
 }
