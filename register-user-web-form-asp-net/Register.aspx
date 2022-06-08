@@ -12,18 +12,22 @@
             margin: 0 auto;
         }
 
-        .container  h1{
-            text-align: center
-        }
+            .container h1 {
+                text-align: center
+            }
 
         .campo {
             padding: 10px;
         }
 
-        .campo input[type="text"]{
-            float: right;
-            width: 350px
-        }
+            .campo input[type="text"] {
+                float: right;
+                width: 350px
+            }
+
+            .campo input[type="submit"] {
+                float: right;
+            }
     </style>
 </head>
 <body>
@@ -31,20 +35,20 @@
         <div class="container">
             <h1>Registration</h1>
             <div class="campo">
-                <label for="textName">Name: </label>
-                <input type="text" id="nameId" />
+                <asp:Label runat="server" AssociatedControlID="nameId">Name: </asp:Label>
+                <asp:TextBox runat="server" ID="nameId"></asp:TextBox>
             </div>
             <div class="campo">
-                <label for="emailId">Email: </label>
-                <input type="text" id="emailId" />
+                <asp:Label runat="server" AssociatedControlID="emailId">Email: </asp:Label>
+                <asp:TextBox runat="server" ID="emailId"></asp:TextBox>
             </div>
             <div class="campo">
-                <label for="numberId">Number: </label>
-                <input type="text" id="numberId" />
+                <asp:Label runat="server" AssociatedControlID="numberId">Number: </asp:Label>
+                <asp:TextBox runat="server" ID="numberId"></asp:TextBox>
             </div>
 
             <div class="campo">
-               <input type="submit" />
+                <asp:Button ID="RegisterButtonId" runat="server" Text="Register"></asp:Button>
             </div>
         </div>
     </form>
